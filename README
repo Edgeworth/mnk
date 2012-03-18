@@ -1,0 +1,14 @@
+This is an implementation of a game called an m,n,k game. It's like an extended version of naughts and crosses. 
+
+
+Required libraries and programs:
+cmake
+libSFML
+
+run build.py
+
+execution:
+./main (board size nxn) (length of line to win) (difficulty -- corresponds to how deep the tree is searched)
+
+e.g. ./main 3 3 x
+is naughts and crosses

@@ -27,10 +27,11 @@ int main(int argc, char *argv[]) {
 				float y = float(e.MouseButton.Y)/winH;
 				b[int(y*N)][int(x*N)] = THEIRS;
 				++fill;
+				if (done() || won(MINE) || won(THEIRS)) {finished = true; break;}
 				negamax(MINE);
-				if (done() || won(MINE) || won(THEIRS)) finished = true;
+				if (done() || won(MINE) || won(THEIRS)) {finished = true; break;}
 				b[bestR][bestC] = MINE;
-				if (done() || won(MINE) || won(THEIRS)) finished = true;
+				if (done() || won(MINE) || won(THEIRS)) {finished = true; break;}
 			}
 		}
 		glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
